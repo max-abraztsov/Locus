@@ -1,2 +1,17 @@
+import '../scss/zero.scss';
 import '../css/style.css';
 import '../scss/style.scss';
+import '../img/logo.png';
+import '../img/inside.jpg';
+import "../img/Play.png";
+import "../img/main-img.png";
+import "../img/visual.jpg";
+import "../img/circle-rect.png";
+import "../img/circle.png";
+import "../img/circle-rect2.png";
+import "../img/logos1.png";
+import "../img/logos2.png";
+import "../img/logos3.png";
+import "../img/logos4.png";
+import "../img/expirience.jpg";
+import "../img/backtic.png";

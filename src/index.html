@@ -5,19 +5,194 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Locus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/ico">
 </head>
 <body>
-    <div class="wrapper">
-        <form class="form-signin">
-            <h2 class="form-signin-heading">This is form</h2>
-            <input type="text" class="form-control">
-            <input id="checkbox" type="checkbox">
-            <button class="btn btn-block btn-lg btn-primary">Confirm</button>
-        </form>
-        <button id="color" class="btn btn-block btn-lg btn-primary">Change color</button>
-    </div>
-    <div class="picture">
-    </div>
+   <div class="wrapper">
+       <header class="header">
+            <div class="header__logo">
+                <img src="./img/logo.png" alt="LOCUS" class="header__image">
+            </div>
+            <nav class="header__navigation">
+                <ul class="header__items">
+                    <li><a href="#" class="header__item">Home</a></li>
+                    <li><a href="#" class="header__item">Contact</a></li>
+                    <li><a href="#" class="header__item">Location</a></li>
+                    <li><a href="#" class="header__item">About Us</a></li>
+                </ul>
+                <ul class="header__nav">
+                    <span class="header__span span1"></span>
+                    <span class="header__span span2"></span>
+                    <span class="header__span span3"></span>
+                </ul>
+            </nav>
+            <form action="" method="get">
+                <button class="header__button button">Sign Up</button>
+            </form>
+       </header>
+       <main class="main">
+            <section class="home">
+                <div class="home__text">
+                    <h2 class="home__title title">Get the inspiration
+                        of interior design 
+                        here</h2>
+                    <p class="home__description description">Architecture not only about engineering, it even 
+                        lands to art and aesthetics. With us, you will get 
+                        a residentical design with an extraordinary touch 
+                        of art.</p>
+                    <form action="#" method="get">
+                        <button class="home__button button">Let’s go</button>
+                    </form>
+                </div>
+                <div class="home__image-block">
+                    <img src="./img/main-img.png" class="home__image-img"  alt="Main image there">
+                </div>
+            </section>
+            <section class="explanation">
+                <div class="explanation__content content">
+                    <h2 class="explanation__title title">How it works</h2>
+                    <p class="explanation__description description">Spice up your space even simpler
+                        than you think</p>
+                </div>
+                <div class="explanation__video">
+                    <div class="explanation__image-video">
+                        <img src="./img/inside.jpg" alt="#" class="explanation__image-img">
+                    </div>
+                    <div class="explanation__image-play">
+                        <img src="./img/Play.png" alt="#" class="explanation__image-play">
+                    </div>
+                    <div class="explanation__text">
+                        <p class="explanation__description-little description-little">
+                            We provide design and build 
+                            for commercial building, 
+                            interior and furniture to improve 
+                            the better life. </p>
+                        <a class="explanation__link">SEE  VIDEO</a>
+                    </div>
+                </div>
+                <div class="explanation__image-block">
+                    <div class="explanation__image-visual">
+                        <img src="./img/visual.jpg" alt="#" class="explanation__image-visual">
+                    </div>
+                    <div class="explanation__texting">
+                        <h2 class="explanation__title-main">Our mission is to 
+                            deliver aesthetic visual 
+                            for your home</h2>
+                        <p class="explanation__description-big">By applying bacis psychology principles, 
+                            we are going to explain how perception 
+                            works and how we can use this understanding 
+                            to maximise the space that we occupy in 
+                            our homes.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="projects">
+                <div class="projects__content content">
+                    <h2 class="projects__title title">Our project </h2>
+                    <p class="projects__description description">
+                        Introducing our first official project
+                    </p>
+                </div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="projects__items">
+                    <div class="projects__item">
+                        <div class="projects__text">
+                            <h2 class="projects__subtitle">Project Livingroom</h2>
+                            <p class="projects__subdescription">
+                                A simple guide to create the perfect livingro-
+                                om for . Night Watc works beautifully in a wi-
+                                de gamut of arrangements.
+                            </p>
+                        </div>
+                        <div class="projects__image">
+                            <img src="./img/circle-rect.png" alt="#" class="projects__foto">
+                        </div>
+                    </div>
+                    <div class="projects__item">
+                        <div class="projects__image">
+                            <img src="./img/circle.png" alt="#" class="projects__foto">
+                        </div>
+                        <div class="projects__text">
+                            <h2 class="projects__subtitle">Project workspace</h2>
+                            <p class="projects__subdescription">
+                                A simple guide to create the perfect livingro-
+                                om for . Night Watc works beautifully in a wi-
+                                de gamut of arrangements.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="projects__item">
+                        <div class="projects__text">
+                            <h2 class="projects__subtitle">Library</h2>
+                            <p class="projects__subdescription">
+                                A simple guide to create the perfect livingro-
+                                om for . Night Watc works beautifully in a wi-
+                                de gamut of arrangements.
+                            </p>
+                        </div>
+                        <div class="projects__image">
+                            <img src="./img/circle-rect2.png" alt="#" class="projects__foto">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="test">
+                <div class="projects__content content">
+                    <h2 class="projects__title title">Testimonial</h2>
+                </div>
+                <div class="projects__brands">
+                    <img src="./img/logos1.png" alt="#" class="project__brand">
+                    <img src="./img/logos2.png" alt="#" class="project__brand">
+                    <img src="./img/logos3.png" alt="#" class="project__brand">
+                    <img src="./img/logos4.png" alt="#" class="project__brand">
+                </div>
+                <div class="projects__exp">
+                    <div class="projects__image">
+                        <img src="./img/expirience.jpg" alt="#" class="projects__foto">
+                    </div>
+                    <div class="projects__text">
+                        <div class="projects__achieves">
+                            <p class="projects__achieve">
+                                <span>105</span><br>
+                                project <br>
+                                done
+                            </p>
+                            <p class="projects__achieve">
+                                <span>12</span><br>
+                                years of 
+                                experience  
+                            </p>
+                            <p class="projects__achieve">
+                                <span>10+</span><br>
+                                big company
+                                partnership
+                            </p>
+                        </div>
+                        <div class="projects__review">
+                            <div class="projects__image-add">
+                                <img src="./img/backtic.png" alt="#" class="projects__foto-add">
+                            </div>
+                            <p class="projects__review-text">
+                                "Not able to tell you how happy I am with interior design. 
+                                Interior design has completely surpassed our expectations. 
+                                Interior design saved my business. Interior design is worth 
+                                much more than I paid."<br>
+                                <span>- Roscoe</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+       </main>
+       <footer class="footer">
+
+       </footer>    
+   </div>
 </body>
 </html>
