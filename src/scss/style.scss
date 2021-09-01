@@ -48,6 +48,15 @@ $cianCol: #58A9A5;
     text-align:center;
 }
 
+%tpl__input{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 37px;
+    color: #486958;
+}
+
 .wrapper {
     min-height: 100vh;
     display:grid;
@@ -198,10 +207,7 @@ $cianCol: #58A9A5;
     line-height: 45px;
     color: #486958;
 }
-.footer {
-    grid-column:2/3;
-    grid-row:2/3;
-}
+
 .projects {
     margin-bottom:250px;
 
@@ -290,7 +296,7 @@ $cianCol: #58A9A5;
 }
 
 .test {
-    
+    margin-bottom:240px;
 }
 .projects__content {
 }
@@ -377,4 +383,96 @@ $cianCol: #58A9A5;
         margin-top:30px;
     }
 
+}
+
+.footer {
+    grid-column:2/3;
+    grid-row:3/4;
+    display:flex;
+}
+.footer__form{
+    border:1px solid #486958;
+    width:100%;
+    height:450px;
+    form{
+        margin: 0 54px 0 54px;
+    }
+}
+.footer__input{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 37px;
+    color: #486958;
+    margin-top:57px;
+    margin-bottom:25px;
+    &::-webkit-input-placeholder{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 37px;
+        color: #486958;
+    }
+    &::-moz-placeholder{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 37px;
+        color: #486958;
+    }
+    &:-moz-placeholder{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 37px;
+        color: #486958;
+    }
+    &:-ms-input-placeholder{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 37px;
+        color: #486958;
+    }
+}
+
+#textarea__descr{
+    margin-top: 37px;
+    width:71%;
+}
+
+.footer__content {
+    max-width: 398px;
+    margin-right:105px;
+    .line {
+        margin:0;
+        margin-bottom:10px;
+    }
+}
+.footer__title {
+}
+.title {
+}
+.footer__questions {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 37px;
+    color: #486958;  
+    margin:10px 0 37px 0;  
+}
+.footer__button{
+   
+}
+
+.black__line {
+    width:1000px;
+    height:3px;
+    background-color: #486958;
 }

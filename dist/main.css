@@ -590,10 +590,6 @@ template {
   line-height: 45px;
   color: #486958; }
 
-.footer {
-  grid-column: 2/3;
-  grid-row: 2/3; }
-
 .projects {
   margin-bottom: 250px; }
   .projects__description {
@@ -626,6 +622,9 @@ template {
   background-color: #58A9A5;
   margin: 0 auto;
   margin-bottom: 10px; }
+
+.test {
+  margin-bottom: 240px; }
 
 .projects__brands {
   display: flex;
@@ -693,4 +692,30 @@ template {
     color: #75BBB5;
     display: inline-block;
     margin-top: 30px; }
+
+.footer {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  display: flex; }
+
+.footer__form {
+  border: 1px solid black;
+  width: 100%;
+  height: 450px; }
+
+.footer__content {
+  max-width: 398px;
+  margin-right: 105px; }
+  .footer__content .line {
+    margin: 0;
+    margin-bottom: 10px; }
+
+.footer__questions {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 37px;
+  color: #486958;
+  margin: 10px 0 37px 0; }
 
