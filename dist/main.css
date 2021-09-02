@@ -441,22 +441,46 @@ template {
   line-height: 37px;
   color: white; }
 
+@media screen and (max-width: 1440px) {
+  .button {
+    width: 250px;
+    height: 70px;
+    font-size: 20px;
+    line-height: 37px; } }
+
+@media screen and (max-width: 1280px) {
+  .button {
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    line-height: 37px; } }
+
 .title {
   font-family: Poppins;
   font-style: normal;
   font-weight: 800;
-  font-size: 70px;
-  line-height: 105px;
+  font-size: calc(65px + (70 - 65)*((100vw - 1600px)/(1920-1600)));
+  line-height: calc(80px + (105 - 80)*((100vw - 1600px)/(1920-1600)));
   color: #1C2323;
   max-width: 674px; }
+
+@media screen and (max-width: 1600px) {
+  .title {
+    font-size: calc(40px + (65 - 40)*((100vw - 1024px)/(1600-1024)));
+    line-height: calc(50px + (80 - 50)*((100vw - 1024px)/(1600-1024))); } }
 
 .description {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
-  line-height: 45px;
+  font-size: calc(26px + (30 - 26)*((100vw - 1600px)/(1920-1600)));
+  line-height: calc(37px + (45 - 37)*((100vw - 1600px)/(1920-1600)));
   color: #404242; }
+
+@media screen and (max-width: 1600px) {
+  .description {
+    font-size: calc(20px + (26 - 20)*((100vw - 1024px)/(1600-1024)));
+    line-height: calc(25px + (37 - 25)*((100vw - 1024px)/(1600-1024))); } }
 
 .description-little {
   font-family: Poppins;
@@ -477,6 +501,12 @@ template {
   display: grid;
   grid-template: minmax(auto, 250px) 1fr minmax(auto, 784px)/minmax(auto, 140px) 1fr minmax(auto, 140px); }
 
+@media screen and (max-width: 1600px) {
+  .wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template: minmax(auto, calc(125px + (250 - 125)*((100vw - 1024px)/(1920-1024)))) 1fr minmax(auto, 784px)/minmax(auto, calc(100px + (140 - 100)*((100vw - 1024px)/(1920-1024)))) 1fr minmax(auto, calc(100px + (140 - 100)*((100vw - 1024px)/(1920-1024)))); } }
+
 .header {
   grid-row: 1/2;
   grid-column: 2/3;
@@ -484,13 +514,28 @@ template {
   align-items: center;
   justify-content: space-between; }
 
+.header__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
 .header__items {
   display: flex; }
+
+@media screen and (max-width: 1024px) {
+  .header__items {
+    display: none; } }
 
 .header__items li {
   margin-right: 85px; }
   .header__items li:last-child {
     margin-right: 0px; }
+
+@media screen and (max-width: 1440px) {
+  .header__items li {
+    margin-right: 35px; }
+    .header__items li:last-child {
+      margin-right: 0px; } }
 
 .header__item {
   font-family: Poppins;
@@ -500,12 +545,34 @@ template {
   line-height: 37px;
   color: #404242; }
 
+@media screen and (max-width: 1440px) {
+  .header__item {
+    font-size: calc(18px + (25 - 18)*((100vw - 1024px)/(1440-1024)));
+    line-height: 37px; } }
+
 .header__nav {
   display: none; }
+
+@media screen and (max-width: 1024px) {
+  .header__nav {
+    display: block; } }
+
+.header__span {
+  display: block;
+  width: 40px;
+  height: 4px;
+  border: 1px solid #58A9A5;
+  margin-bottom: 8px;
+  border-radius: 2px;
+  background-color: #58A9A5; }
 
 .header__button {
   border-radius: 15px;
   font-weight: 500; }
+
+@media screen and (max-width: 1024px) {
+  .header__button {
+    display: none; } }
 
 .main {
   grid-column: 2/3;
@@ -514,17 +581,51 @@ template {
 .home {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 120px; }
+  margin-bottom: 120px;
+  position: relative; }
+
+@media screen and (max-width: 1024px) {
+  .home__text {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0; } }
 
 .home__title {
-  margin-top: 68px;
-  margin-bottom: 50px; }
+  margin-top: calc(40px + (68 - 40)*((100vw - 1600px)/(1920-1600)));
+  margin-bottom: calc(45px + (50 - 45)*((100vw - 1600px)/(1920-1600))); }
+
+@media screen and (max-width: 1600px) {
+  .home__title {
+    margin-top: calc(35px + (40 - 35)*((100vw - 1024px)/(1600-1024)));
+    margin-bottom: calc(35px + (45 - 35)*((100vw - 1024px)/(1600-1024))); } }
 
 .home__description {
   max-width: 743px; }
 
+@media screen and (max-width: 1440px) {
+  .home__description {
+    max-width: 500px; } }
+
 .home__button {
-  margin-top: 50px; }
+  margin-top: calc(40px + (50 - 40)*((100vw - 1600px)/(1920-1600))); }
+
+@media screen and (max-width: 1600px) {
+  .home__button {
+    margin-top: 40px; } }
+
+@media screen and (max-width: 1600px) {
+  .home__image-block {
+    width: 80%; } }
+
+@media screen and (max-width: 1024px) {
+  .home__image-block {
+    width: 60%;
+    margin-left: 50%; } }
+
+@media screen and (max-width: 1600px) {
+  .home__image-img {
+    width: 100%; } }
 
 .explanation {
   margin-bottom: 120px; }
@@ -699,9 +800,53 @@ template {
   display: flex; }
 
 .footer__form {
-  border: 1px solid black;
+  border: 1px solid #486958;
   width: 100%;
   height: 450px; }
+  .footer__form form {
+    margin: 0 54px 0 54px; }
+
+.footer__input {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 37px;
+  color: #486958;
+  margin-top: 57px;
+  margin-bottom: 25px; }
+  .footer__input::-webkit-input-placeholder {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 37px;
+    color: #486958; }
+  .footer__input::-moz-placeholder {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 37px;
+    color: #486958; }
+  .footer__input:-moz-placeholder {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 37px;
+    color: #486958; }
+  .footer__input:-ms-input-placeholder {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 37px;
+    color: #486958; }
+
+#textarea__descr {
+  margin-top: 37px;
+  width: 71%; }
 
 .footer__content {
   max-width: 398px;
@@ -718,4 +863,9 @@ template {
   line-height: 37px;
   color: #486958;
   margin: 10px 0 37px 0; }
+
+.black__line {
+  width: 1000px;
+  height: 3px;
+  background-color: #486958; }
 
