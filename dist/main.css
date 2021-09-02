@@ -639,23 +639,30 @@ template {
   margin: 20px 0 71px 0; }
 
 .explanation__video {
-  position: relative;
   display: flex;
   background: #CCF0E6;
-  margin-bottom: 150px; }
+  margin-bottom: 150px;
+  width: 100%; }
+
+.explanation__image-video {
+  width: 66%;
+  background: url(img/inside.jpg);
+  background-size: cover; }
 
 .explanation__image-play {
   position: absolute;
-  top: 90px;
-  left: 500px; }
+  top: 105px;
+  left: -60px; }
 
 .explanation__text {
   max-width: 328px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 34%;
+  position: relative; }
 
 .explanation__description-little {
-  margin-top: 70px;
-  margin-bottom: 41px; }
+  padding: 70px 25px 41px 25px; }
 
 .explanation__link {
   font-family: Poppins;
@@ -664,13 +671,19 @@ template {
   font-size: 20px;
   line-height: 30px;
   color: #486958;
-  letter-spacing: 4px; }
+  letter-spacing: 4px;
+  padding: 0 25px 70px 25px;
+  display: inline-block; }
 
 .explanation__image-block {
   display: flex; }
 
 .explanation__texting {
   padding-left: 142px; }
+
+@media screen and (max-width: 1440px) {
+  .explanation__texting {
+    padding-left: 90px; } }
 
 .explanation__title-main {
   max-width: 487px;
