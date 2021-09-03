@@ -707,10 +707,6 @@ $frs: calc(50px + (140 - 50)*((100vw - 768px)/(1920-768)));
 }
 .content {
 }
-.title {
-}
-.description {
-}
 
 
 
@@ -720,19 +716,20 @@ $frs: calc(50px + (140 - 50)*((100vw - 768px)/(1920-768)));
 .test {
     margin-bottom:240px;
 }
-.projects__content {
+.test__content {
 }
 .content {
 }
-.projects__title {
+.test__title {
 }
 .title {
 }
-.projects__brands {
+.test__brands {
     display:flex;
     justify-content:center;
+    flex-wrap:wrap;
 }
-.project__brand {
+.test__brand {
     margin-right:90px;
     &:first-child{
         margin-right:20px;
@@ -741,21 +738,46 @@ $frs: calc(50px + (140 - 50)*((100vw - 768px)/(1920-768)));
         margin-right:0;
     }
 }
-.projects__exp {
+@media screen and (max-width:1320px) {
+    .test__brand {
+        margin-right:0;
+    }
+}
+.test__exp {
     background-color: #CCF0E6;
     display:flex;
+    margin:0 auto;
 }
-.projects__image {
+@media screen and (max-width:1280px) {
+    .test__exp {
+        flex-direction:column;
+        align-items:center;
+        max-width:500px;
+    }
 }
-.projects__foto {
+.test__image {
+    width:100%;
 }
-.projects__text {
+.test__foto {
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+.test__text {
     margin:50px auto;
+    padding:0 40px;
 }
-.projects__achieves {
+@media screen and (max-width:1600px) {
+    .test__text {
+       
+    } 
+}
+
+.test__achieves {
     display:flex;
     justify-content:space-between;
-    margin-bottom:100px;
+    margin-bottom:90px;
+    flex-wrap:wrap;
     span{
         font-family: Poppins;
         font-weight: 800;
@@ -763,8 +785,15 @@ $frs: calc(50px + (140 - 50)*((100vw - 768px)/(1920-768)));
         line-height: 105px;
         color: #58A9A5;
     }
+    @media screen and (max-width:1440px) {
+        span {
+            font-size: calc(30px + (70 - 30)*((100vw - 360px)/(1440-360)));
+            line-height:calc(50px + (105 - 50)*((100vw - 360px)/(1440-360)));
+        } 
+    }
+    
 }
-.projects__achieve {
+.test__achieve {
     font-family: Poppins;
     font-style: normal;
     font-weight: 600;
@@ -772,20 +801,35 @@ $frs: calc(50px + (140 - 50)*((100vw - 768px)/(1920-768)));
     line-height: 45px;
     color: #58A9A5;
     max-width:204px;
+    margin-bottom:10px;
+}
+@media screen and (max-width:1440px) {
+    .test__achieve {
+        display:inline-block;
+        font-size: calc(22px + (30 - 22)*((100vw - 360px)/(1440-768)));
+        line-height:calc(30px + (45 - 30)*((100vw - 360px)/(1440-768)));
+        padding-right:18px;
+    } 
 }
 
-.projects__review {
+.test__review {
     max-width:752px;
     position:relative;
     z-index:3;
-    .projects__image-add{
+    .test__image-add{
         position:absolute;
         left:-40px;
         top:-60px;
         z-index:1;
     }
+    @media screen and (max-width:1600px) {
+        .test__image-add{
+            left:-20px;
+        } 
+    }
+
 }
-.projects__review-text {
+.test__review-text {
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
@@ -806,6 +850,25 @@ $frs: calc(50px + (140 - 50)*((100vw - 768px)/(1920-768)));
     }
 
 }
+@media screen and (max-width:1024px) {
+    .test__review-text {
+        font-size: calc(18px + (25 - 18)*((100vw - 360px)/(1024-360)));
+        line-height: calc(25px + (37 - 25)*((100vw - 360px)/(1024-360)));
+        span{
+            font-size: calc(18px + (25 - 18)*((100vw - 360px)/(1024-360)));
+            line-height: calc(25px + (37 - 25)*((100vw - 360px)/(1024-360)));
+            margin-top:30px;
+        }
+    
+    }
+}
+
+
+
+
+
+
+
 
 .footer {
     grid-column:2/3;
