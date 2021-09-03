@@ -951,8 +951,11 @@ template {
 
 .test__brands {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
+  justify-content: center; }
+
+@media screen and (max-width: 1320px) {
+  .test__brands {
+    flex-wrap: wrap; } }
 
 .test__brand {
   margin-right: 90px; }
@@ -1136,4 +1139,8 @@ template {
   width: 1000px;
   height: 3px;
   background-color: #486958; }
+
+@media screen and (max-width: 1600px) {
+  .black__line {
+    width: calc(100px + (1000 - 100)*((100vw - 360px)/(1600-360))); } }
 

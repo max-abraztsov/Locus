@@ -777,7 +777,6 @@ $frs: calc(50px + (140 - 50)*((100vw - 768px)/(1920-768)));
     display:flex;
     justify-content:space-between;
     margin-bottom:90px;
-    flex-wrap:wrap;
     span{
         font-family: Poppins;
         font-weight: 800;
@@ -790,8 +789,12 @@ $frs: calc(50px + (140 - 50)*((100vw - 768px)/(1920-768)));
             font-size: calc(30px + (70 - 30)*((100vw - 360px)/(1440-360)));
             line-height:calc(50px + (105 - 50)*((100vw - 360px)/(1440-360)));
         } 
+    }  
+}
+@media screen and (max-width:1280px) {
+    .test__achieves {
+        flex-wrap:wrap;
     }
-    
 }
 .test__achieve {
     font-family: Poppins;
@@ -875,12 +878,34 @@ $frs: calc(50px + (140 - 50)*((100vw - 768px)/(1920-768)));
     grid-row:3/4;
     display:flex;
 }
+@media screen and (max-width:1600px){
+    .footer {
+       flex-direction: column;
+    }
+}
 .footer__form{
     border:1px solid #486958;
     width:100%;
     height:450px;
     form{
         margin: 0 54px 0 54px;
+    }
+}
+
+@media screen and (max-width:800px){
+    .footer__form{
+        height:550px;
+        form{
+            margin: 0 30px 0 30px;
+        }
+    }
+}
+@media screen and (max-width:800px){
+    .footer__form{
+        height:550px;
+        form{
+            margin: 0 30px 0 30px;
+        }
     }
 }
 .footer__input{
@@ -928,18 +953,22 @@ $frs: calc(50px + (140 - 50)*((100vw - 768px)/(1920-768)));
 
 #textarea__descr{
     margin-top: 37px;
-    width:71%;
+    width:calc(65% + (71 - 65)*((100vw - 360px)/(1920-1600)));
 }
 
 .footer__content {
     max-width: 398px;
     margin-right:105px;
+    text-align: center;
+    margin:0 auto;
     .line {
-        margin:0;
+        margin:0 auto;
         margin-bottom:10px;
     }
 }
+
 .footer__title {
+
 }
 .title {
 }
@@ -952,12 +981,25 @@ $frs: calc(50px + (140 - 50)*((100vw - 768px)/(1920-768)));
     color: #486958;  
     margin:10px 0 37px 0;  
 }
+
 .footer__button{
    
+}
+@media screen and (max-width:800px){
+    .footer__button{
+        display:block;
+        width:100%;
+        margin: 20px 0 30px 0;
+    }
 }
 
 .black__line {
     width:1000px;
     height:3px;
     background-color: #486958;
+}
+@media screen and (max-width:1600px){
+    .black__line{
+        width: 100%;
+    }
 }
