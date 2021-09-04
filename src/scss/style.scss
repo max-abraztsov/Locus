@@ -166,6 +166,7 @@ $frs: calc(50px + (140 - 50)*((100vw - 768px)/(1920-768)));
     font-size: 25px;
     line-height: 37px;
     color: #404242;
+    transition: 0.7s;
 }
 @media screen and (max-width:1440px){
     .header__item{
@@ -177,7 +178,7 @@ $frs: calc(50px + (140 - 50)*((100vw - 768px)/(1920-768)));
 .active__item{
     font-weight: 600;
     color:rebeccapurple;
-    // transition: 0.4s;
+    transition: 0.7s;
 }
 
 .header__under{

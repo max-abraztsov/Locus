@@ -554,7 +554,8 @@ template {
   font-weight: normal;
   font-size: 25px;
   line-height: 37px;
-  color: #404242; }
+  color: #404242;
+  transition: 0.7s; }
 
 @media screen and (max-width: 1440px) {
   .header__item {
@@ -563,7 +564,8 @@ template {
 
 .active__item {
   font-weight: 600;
-  color: rebeccapurple; }
+  color: rebeccapurple;
+  transition: 0.7s; }
 
 .header__under {
   width: 75px;

@@ -18,33 +18,51 @@ import "../img/backtic.png";
 
 
 window.addEventListener('DOMContentLoaded', () => {
-
-
-    // Tabs in navigation
+    
+    // Tabs and scroll in navigation
     const navigation = document.querySelector('.header__navigation'),
-          itemsParent = document.querySelector('.header__items'),
-          itemsChildren = document.querySelectorAll('.header__item'),
-          underLine = navigation.querySelector('.header__under');
+          itemsChildren = navigation.querySelectorAll('.header__item'),
+          underLine = navigation.querySelector('.header__under'),
+          projects =document.querySelector('.projects'),
+          footer = document.querySelector('.footer');
 
     underLine.style.width = `${itemsChildren[0].offsetWidth}px`;
 
-    itemsChildren.forEach(item => {
+    function removeClass(){
+        itemsChildren.forEach( item => {
+            item.classList.remove('active__item');
+        });
+    }
+
+    function scrollTo(elem){
+        setTimeout(() =>{
+            window.scroll({
+                left:0,
+                top:elem.offsetTop,
+                behavior:'smooth'
+            }); 
+        }, 500);
+    }
+
+    itemsChildren.forEach( item => {
         item.addEventListener('click', () => {
-
-            function getWidth(){
-                let widthElem = item.offsetWidth;
-                let leftElem = item.offsetLeft;
-                underLine.style.width = widthElem + 'px';
-                underLine.style.transition = '0.4s ease-in-out';
-                underLine.style.marginLeft = `${leftElem}px`;
-            }
-
-            itemsChildren.forEach( item => {
-                item.classList.remove('active__item');
-            });
-
+            removeClass();
+            
             item.classList.add('active__item');
-            getWidth();
+
+            underLine.style.cssText = `
+                width: ${item.offsetWidth}px;
+                transition: 0.4s ease-in-out;
+                margin-left: ${item.offsetLeft}px;
+            `;
+           
+            if (item.textContent == "Contact"){
+                scrollTo(footer);
+            } else if (item.textContent == "About Us"){
+                scrollTo(projects);
+            } else {
+                scrollTo(document);
+            }
         });
     });
 });
