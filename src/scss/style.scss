@@ -31,6 +31,7 @@ $frs: calc(50px + (140 - 50)*((100vw - 768px)/(1920-768)));
     }
 }
 
+
 .title{
     font-family: Poppins;
     font-style: normal;
@@ -128,8 +129,8 @@ $frs: calc(50px + (140 - 50)*((100vw - 768px)/(1920-768)));
 }
 .header__navigation {
     display:flex;
-    align-items:center;
-    justify-content:space-between;
+    flex-direction:column;
+    position:relative;
 }
 
 .header__items {
@@ -172,6 +173,26 @@ $frs: calc(50px + (140 - 50)*((100vw - 768px)/(1920-768)));
         line-height: 37px;
     }
 }
+
+.active__item{
+    font-weight: 600;
+    color:rebeccapurple;
+    // transition: 0.4s;
+}
+
+.header__under{
+    width:75px;
+    height:5px;
+    border:1px solid orange;
+    background-color:orange;
+    border-radius:3px;
+}
+@media screen and (max-width:1024px){
+    .header__under {
+        display:none;
+    }
+}
+
 .header__nav {
     display:none;
 }

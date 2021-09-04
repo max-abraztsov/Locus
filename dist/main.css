@@ -527,8 +527,8 @@ template {
 
 .header__navigation {
   display: flex;
-  align-items: center;
-  justify-content: space-between; }
+  flex-direction: column;
+  position: relative; }
 
 .header__items {
   display: flex; }
@@ -560,6 +560,21 @@ template {
   .header__item {
     font-size: calc(18px + (25 - 18)*((100vw - 1024px)/(1440-1024)));
     line-height: 37px; } }
+
+.active__item {
+  font-weight: 600;
+  color: rebeccapurple; }
+
+.header__under {
+  width: 75px;
+  height: 5px;
+  border: 1px solid orange;
+  background-color: orange;
+  border-radius: 3px; }
+
+@media screen and (max-width: 1024px) {
+  .header__under {
+    display: none; } }
 
 .header__nav {
   display: none; }
@@ -951,11 +966,8 @@ template {
 
 .test__brands {
   display: flex;
-  justify-content: center; }
-
-@media screen and (max-width: 1320px) {
-  .test__brands {
-    flex-wrap: wrap; } }
+  justify-content: center;
+  flex-wrap: wrap; }
 
 .test__brand {
   margin-right: 90px; }
@@ -994,8 +1006,7 @@ template {
 .test__achieves {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 90px;
-  flex-wrap: wrap; }
+  margin-bottom: 90px; }
   .test__achieves span {
     font-family: Poppins;
     font-weight: 800;
@@ -1006,6 +1017,10 @@ template {
     .test__achieves span {
       font-size: calc(30px + (70 - 30)*((100vw - 360px)/(1440-360)));
       line-height: calc(50px + (105 - 50)*((100vw - 360px)/(1440-360))); } }
+
+@media screen and (max-width: 1280px) {
+  .test__achieves {
+    flex-wrap: wrap; } }
 
 .test__achieve {
   font-family: Poppins;
@@ -1070,12 +1085,28 @@ template {
   grid-row: 3/4;
   display: flex; }
 
+@media screen and (max-width: 1600px) {
+  .footer {
+    flex-direction: column; } }
+
 .footer__form {
   border: 1px solid #486958;
   width: 100%;
   height: 450px; }
   .footer__form form {
     margin: 0 54px 0 54px; }
+
+@media screen and (max-width: 800px) {
+  .footer__form {
+    height: 550px; }
+    .footer__form form {
+      margin: 0 30px 0 30px; } }
+
+@media screen and (max-width: 800px) {
+  .footer__form {
+    height: 550px; }
+    .footer__form form {
+      margin: 0 30px 0 30px; } }
 
 .footer__input {
   font-family: Poppins;
@@ -1117,13 +1148,15 @@ template {
 
 #textarea__descr {
   margin-top: 37px;
-  width: 71%; }
+  width: calc(65% + (71 - 65)*((100vw - 360px)/(1920-1600))); }
 
 .footer__content {
   max-width: 398px;
-  margin-right: 105px; }
+  margin-right: 105px;
+  text-align: center;
+  margin: 0 auto; }
   .footer__content .line {
-    margin: 0;
+    margin: 0 auto;
     margin-bottom: 10px; }
 
 .footer__questions {
@@ -1135,6 +1168,12 @@ template {
   color: #486958;
   margin: 10px 0 37px 0; }
 
+@media screen and (max-width: 800px) {
+  .footer__button {
+    display: block;
+    width: 100%;
+    margin: 20px 0 30px 0; } }
+
 .black__line {
   width: 1000px;
   height: 3px;
@@ -1142,5 +1181,5 @@ template {
 
 @media screen and (max-width: 1600px) {
   .black__line {
-    width: calc(100px + (1000 - 100)*((100vw - 360px)/(1600-360))); } }
+    width: 100%; } }
 
