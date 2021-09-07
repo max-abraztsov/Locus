@@ -24,7 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
           itemsChildren = navigation.querySelectorAll('.header__item'),
           underLine = navigation.querySelector('.header__under'),
           projects =document.querySelector('.projects'),
-          footer = document.querySelector('.footer');
+          footer = document.querySelector('.footer'),
+          menuBurgerTab = document.querySelector('.header__burger');
 
     underLine.style.width = `${itemsChildren[0].offsetWidth}px`;
 
@@ -49,6 +50,8 @@ window.addEventListener('DOMContentLoaded', () => {
             removeClass();
             
             item.classList.add('active__item');
+            menuBurgerTab.classList.remove('active');
+            navigation.classList.remove('active');
 
             underLine.style.cssText = `
                 width: ${item.offsetWidth}px;
@@ -65,4 +68,18 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+
+
+    // Menu-burger
+    const navigationBurger = document.querySelector('.header__navigation'),
+          menuBurger = document.querySelector('.header__burger');
+
+    menuBurger.addEventListener('click', (e) => {
+        menuBurger.classList.toggle('active');
+        navigationBurger.classList.toggle('active');
+        document.body.classList.toggle('lock');
+    });
+
+
 });
