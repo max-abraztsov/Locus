@@ -87,7 +87,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('.footer__form form'),
           nameInput = form.querySelector('[name="name"]'),
           emailInput = form.querySelector('[name="email"]'),
-          descInput = form.querySelector('[name="description"]');
+          descInput = form.querySelector('[name="description"]'),
+          buttonHome = document.querySelector('.home__button');
 
     async function workWithNewData (url, method, headers,body){
         const newData = await fetch(url, {
@@ -99,6 +100,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     postData(form);
+    modal()
 
     function postData(form){
         form.addEventListener('submit', (e) => {
@@ -112,6 +114,11 @@ window.addEventListener('DOMContentLoaded', () => {
             // //Для работы с FormData
             // const formData = new FormData();
             // const convertJson = JSON.stringify(Object.fromEntries(formData.entries()));
+            const localData = {
+                name:nameInput.value,
+                email:emailInput.value,
+            }
+            localStorage.setItem(localData.name, JSON.stringify(localData));
 
             workWithNewData('https://jsonplaceholder.typicode.com/users',
             'POST',
@@ -125,6 +132,11 @@ window.addEventListener('DOMContentLoaded', () => {
                 form.reset();
             })
         });
+    }
+    function modal(){
+        const modalElem = document.createElement('div');
+        modalElem.innerHTML = form.outerHTML;
+        console.log(modalElem.innerHTML);
     }
 
 });
