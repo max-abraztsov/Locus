@@ -82,4 +82,49 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
+
+    //PostData
+    const form = document.querySelector('.footer__form form'),
+          nameInput = form.querySelector('[name="name"]'),
+          emailInput = form.querySelector('[name="email"]'),
+          descInput = form.querySelector('[name="description"]');
+
+    async function workWithNewData (url, method, headers,body){
+        const newData = await fetch(url, {
+            method:method,
+            headers:headers,
+            body:JSON.stringify(body),
+        });
+        return await newData.json();
+    }
+
+    postData(form);
+
+    function postData(form){
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const bodyData = {
+                name:nameInput.value,
+                email:emailInput.value,
+                description:descInput.value
+            }
+            // //Для работы с FormData
+            // const formData = new FormData();
+            // const convertJson = JSON.stringify(Object.fromEntries(formData.entries()));
+
+            workWithNewData('https://jsonplaceholder.typicode.com/users',
+            'POST',
+            {'Content-Type':'application/json'},
+            bodyData)
+            .then(data => {
+                console.log(data);
+            }).catch(() => {
+                console.error('Error');
+            }).finally(() => {
+                form.reset();
+            })
+        });
+    }
+
 });
