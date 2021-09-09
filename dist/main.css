@@ -469,6 +469,39 @@ template {
     font-size: calc(35px + (65 - 35)*((100vw - 425px)/(1600-425)));
     line-height: calc(40px + (80 - 40)*((100vw - 425px)/(1600-425))); } }
 
+.modal {
+  position: fixed;
+  top: 15%;
+  left: 15%;
+  z-index: 1050;
+  width: 70%;
+  max-width: 1075px;
+  height: 60%;
+  overflow: hidden;
+  background-color: #E5EFF3;
+  padding: 30px;
+  border-radius: 20px; }
+  .modal .modal__form {
+    margin: 0 auto; }
+  .modal .modal__close .close {
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    left: 20px;
+    display: block;
+    background-color: black; }
+  .modal .modal__close .close1 {
+    top: 30px;
+    transform: rotate(45deg); }
+  .modal .modal__close .close2 {
+    top: 30px;
+    transform: rotate(-45deg); }
+  .modal input {
+    background-color: #E5EFF3; }
+  .modal textarea {
+    resize: none;
+    background-color: #E5EFF3; }
+
 .description {
   font-family: Poppins;
   font-style: normal;
@@ -1188,7 +1221,7 @@ template {
     .footer__form form {
       margin: 0 30px 0 30px; } }
 
-.footer__input {
+.footer__input, .modal__input {
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
@@ -1197,28 +1230,28 @@ template {
   color: #486958;
   margin-top: 57px;
   margin-bottom: 25px; }
-  .footer__input::-webkit-input-placeholder {
+  .footer__input::-webkit-input-placeholder, .modal__input::-webkit-input-placeholder {
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
     line-height: 37px;
     color: #486958; }
-  .footer__input::-moz-placeholder {
+  .footer__input::-moz-placeholder, .modal__input::-moz-placeholder {
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
     line-height: 37px;
     color: #486958; }
-  .footer__input:-moz-placeholder {
+  .footer__input:-moz-placeholder, .modal__input:-moz-placeholder {
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
     line-height: 37px;
     color: #486958; }
-  .footer__input:-ms-input-placeholder {
+  .footer__input:-ms-input-placeholder, .modal__input:-ms-input-placeholder {
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;

@@ -85,10 +85,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //PostData
     const form = document.querySelector('.footer__form form'),
-          nameInput = form.querySelector('[name="name"]'),
-          emailInput = form.querySelector('[name="email"]'),
-          descInput = form.querySelector('[name="description"]'),
-          buttonHome = document.querySelector('.home__button');
+          nameInput = document.querySelectorAll('[name="name"]'),
+          emailInput = document.querySelectorAll('[name="email"]'),
+          descInput = document.querySelectorAll('[name="description"]');
 
     async function workWithNewData (url, method, headers,body){
         const newData = await fetch(url, {
@@ -100,25 +99,43 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     postData(form);
-    modal()
 
     function postData(form){
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
             const bodyData = {
-                name:nameInput.value,
-                email:emailInput.value,
-                description:descInput.value
+                name:'',
+                email:'',
+                description:''
             }
-            // //Для работы с FormData
-            // const formData = new FormData();
-            // const convertJson = JSON.stringify(Object.fromEntries(formData.entries()));
+
             const localData = {
-                name:nameInput.value,
-                email:emailInput.value,
+                name:'',
+                email:'',
             }
-            localStorage.setItem(localData.name, JSON.stringify(localData));
+
+            function eachInput(inputs, property){
+                inputs.forEach( item => {
+                    if (item.value){
+                        bodyData[property] = item.value;
+                        if (property != 'description'){
+                            localData[property] = item.value;
+                        }
+                    }
+                });
+            }
+
+            eachInput(nameInput, 'name');
+            eachInput(emailInput, 'email');
+            eachInput(descInput, 'description');
+
+            console.log(bodyData);
+            console.log(localData);
+
+            if (JSON.parse(localStorage.getItem(localData.name)) != localData.name && JSON.parse(localStorage.getItem(localData.email)) != localData.email ){
+                localStorage.setItem(localData.name.substr(0,3) + Math.random().toFixed(4), JSON.stringify(localData));
+            }
 
             workWithNewData('https://jsonplaceholder.typicode.com/users',
             'POST',
@@ -133,10 +150,31 @@ window.addEventListener('DOMContentLoaded', () => {
             })
         });
     }
-    function modal(){
-        const modalElem = document.createElement('div');
-        modalElem.innerHTML = form.outerHTML;
-        console.log(modalElem.innerHTML);
+
+
+    // Modal
+
+    const buttonHome = document.querySelector('.home__button'),
+          modalElem = document.querySelector('.modal'),
+          modalClose = modalElem.querySelector('.modal__close'),
+          modalForm =modalElem.querySelector('#modal__form');
+
+    postData(modalForm);
+    closeModal();
+
+    function openModal(){
+        modalElem.style.display = `block`;
+        document.body.style.overflow = 'hidden';
+        
     }
+
+    function closeModal(){
+        modalElem.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+
+    buttonHome.addEventListener('click', openModal);
+    modalClose.addEventListener('click', closeModal);
+
 
 });

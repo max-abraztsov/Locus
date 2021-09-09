@@ -49,6 +49,48 @@ $frs: calc(50px + (140 - 50)*((100vw - 768px)/(1920-768)));
     }
 }
 
+.modal{
+    position:fixed;
+    top:15%;
+    left:15%;
+    z-index:1050;
+    width:70%;
+    max-width:1075px;
+    height:60%;
+    overflow:hidden;
+    background-color:#E5EFF3;
+    padding:30px; 
+    border-radius:20px;
+    .modal__form{
+        margin:0 auto;
+    }
+    .modal__close{
+        .close{
+            width:20px;
+            height:2px;
+            position:absolute;
+            left:20px;
+            display:block;
+            background-color:black;
+        }
+        .close1{
+            top:30px;
+            transform:rotate(45deg);
+        }
+        .close2{
+            top:30px;
+            transform:rotate(-45deg);
+        }
+    }
+    input{
+        background-color: #E5EFF3;
+    }
+    textarea{
+        resize:none;
+        background-color: #E5EFF3;
+    }
+}
+
 
 .description{
     font-family: Poppins;
@@ -1010,7 +1052,7 @@ $frs: calc(50px + (140 - 50)*((100vw - 768px)/(1920-768)));
         }
     }
 }
-.footer__input{
+.footer__input, .modal__input{
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
